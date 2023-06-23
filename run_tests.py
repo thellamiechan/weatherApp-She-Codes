@@ -7,6 +7,8 @@ from tests.test_find_min import FindMinTests
 from tests.test_find_max import FindMaxTests
 from tests.test_generate_summary import GenerateSummaryTests
 from tests.test_generate_daily_summary import GenerateDailySummaryTests
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 runner = unittest.TextTestRunner()
 
@@ -19,3 +21,4 @@ runner.run(unittest.TestSuite((unittest.makeSuite(FindMinTests))))
 runner.run(unittest.TestSuite((unittest.makeSuite(FindMaxTests))))
 runner.run(unittest.TestSuite((unittest.makeSuite(GenerateSummaryTests))))
 runner.run(unittest.TestSuite((unittest.makeSuite(GenerateDailySummaryTests))))
+
